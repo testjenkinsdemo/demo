@@ -12,4 +12,11 @@ pipeline {
       }
     }
   }
+  post {
+    always {
+      archive 'results/*.html'
+
+    }
+
+  }
 }
