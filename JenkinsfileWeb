@@ -1,0 +1,26 @@
+pipeline {
+  agent any
+  stages {
+    stage('Checkout') {
+      steps {
+        echo 'Checkout code'
+      }
+    }
+    stage('UI Tests') {
+      parallel {
+        stage('WebTests') {
+          steps {
+            bat 'runWebTests.bat'
+          }
+        }
+      }
+    }
+  }
+  post {
+    always {
+      junit 'results/*.xml'
+
+    }
+
+  }
+}
