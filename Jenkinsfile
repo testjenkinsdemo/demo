@@ -11,10 +11,11 @@ pipeline {
         bat 'run.bat'
       }
     }
-	stage('results') {
-	steps {
-      junit 'results/*.xml'
-	  }
-    }
+
   }
+	post {
+  always {
+    junit "results/output.xml"
+  }
+}
 }
