@@ -1,1 +1,1 @@
-pybot -d results test.robot
+pybot -d results -x result.xml test.robot
