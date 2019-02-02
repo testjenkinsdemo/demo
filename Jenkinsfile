@@ -6,16 +6,22 @@ pipeline {
         echo 'Checkout code'
       }
     }
-    stage('test') {
+    stage('Web Tests') {
       steps {
         bat 'run.bat'
       }
     }
+    stage('Mobile Tests') {
+      steps {
+        echo 'hh'
+      }
+    }
+  }
+  post {
+    always {
+      junit 'results/*.xml'
+
+    }
 
   }
-	post {
-  always {
-    junit "results/*.xml"
-  }
-}
 }
