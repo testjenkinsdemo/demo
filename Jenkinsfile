@@ -11,6 +11,11 @@ pipeline {
         bat 'runWebTests.bat'
       }
     }
+    stage('Mobile Tests') {
+      steps {
+        bat 'runMobileTests.bat'
+      }
+    }
   }
   post {
     always {
