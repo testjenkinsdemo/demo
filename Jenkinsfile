@@ -15,6 +15,7 @@ pipeline {
   post {
     always {
       archive 'results/*.html'
+      junit 'results/*.xml'
 
     }
 
