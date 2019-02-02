@@ -6,10 +6,5 @@ pipeline {
         echo 'hello'
       }
     }
-    stage('Unit Test') {
-      steps {
-        sh 'echo "Unit test passes"'
-      }
-    }
   }
 }
