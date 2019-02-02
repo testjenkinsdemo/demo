@@ -2,11 +2,11 @@
 *** Variables ***
 *** Test Cases ***
 
-Simple Test1
+Web Test1
 	Log   ola
 
-Simple Test2
+Web Test2
 	Log   ola
 
-Simple Test2
+Web Test3
 	Log   ola
