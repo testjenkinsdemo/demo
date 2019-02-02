@@ -2,5 +2,8 @@
 *** Variables ***
 *** Test Cases ***
 
-Simple Test
+Pass test
 	Log   ola
+	
+Fail Test
+	Fail
