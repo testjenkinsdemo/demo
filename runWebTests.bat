@@ -1,0 +1,1 @@
+pybot -d results -x result.xml web.robot
