@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'echo ${PWD}'
+        bat(script: 'ECHO Hello world', returnStatus: true, returnStdout: true)
       }
     }
   }
