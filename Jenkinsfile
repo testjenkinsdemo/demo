@@ -6,7 +6,7 @@ pipeline {
         echo 'Checkout code'
       }
     }
-    stage('WebTests') {
+    stage('WebTestsxxx') {
       steps {
         bat 'runWebTests.bat'
       }
