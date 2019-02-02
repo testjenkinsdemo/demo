@@ -6,9 +6,9 @@ pipeline {
         echo 'Checkout code'
       }
     }
-    stage('Mobile Tests') {
+    stage('WebTests') {
       steps {
-        bat 'runWebtTests.bat'
+        bat 'runWebTests.bat'
       }
     }
   }
