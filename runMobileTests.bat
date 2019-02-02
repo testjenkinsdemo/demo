@@ -1,1 +1,1 @@
-pybot -d results -x result.xml mobile.robot
+pybot -d results -x mobile.xml mobile.robot
