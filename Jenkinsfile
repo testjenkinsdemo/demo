@@ -6,5 +6,10 @@ pipeline {
         echo 'Checkout code'
       }
     }
+    stage('test') {
+      steps {
+        bat 'run.bat'
+      }
+    }
   }
 }
