@@ -2,9 +2,8 @@
 *** Variables ***
 *** Test Cases ***
 
-Simple Test
+Mobile Test
 	Log   ola
 
-Simple Tes2
-	Log   ola
-	Fail
+Mobile Tes2
+	Should be equal   'ooo'   'www'
