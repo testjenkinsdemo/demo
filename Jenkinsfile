@@ -12,7 +12,9 @@ pipeline {
       }
     }
 	stage('results') {
+	steps {
       junit 'results/*.xml'
+	  }
     }
   }
 }
