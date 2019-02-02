@@ -6,14 +6,18 @@ pipeline {
         echo 'Checkout code'
       }
     }
-    stage('WebTests') {
-      steps {
-        bat 'runWebTests.bat'
-      }
-    }
-    stage('Mobile Tests') {
-      steps {
-        bat 'runMobileTests.bat'
+    stage('UI Tests') {
+      parallel {
+        stage('WebTests') {
+          steps {
+            bat 'runWebTests.bat'
+          }
+        }
+        stage('Mobile Tests') {
+          steps {
+            bat 'runMobileTests.bat'
+          }
+        }
       }
     }
   }
