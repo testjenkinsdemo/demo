@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Web Tests') {
       steps {
-        bat 'run.bat'
+        bat 'runWebTests.bat'
       }
     }
     stage('Mobile Tests') {
       steps {
-        echo 'hh'
+        bat 'runMobileTests.bat'
       }
     }
   }
