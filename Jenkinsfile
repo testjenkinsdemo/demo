@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Mobile Tests') {
       steps {
-        bat 'runMobileTests.bat'
+        bat 'runWebtTests.bat'
       }
     }
   }
