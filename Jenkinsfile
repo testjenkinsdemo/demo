@@ -7,13 +7,17 @@ pipeline {
       }
     }
     stage('Web Tests') {
-      steps {
-        bat 'runWebTests.bat'
-      }
-    }
-    stage('Mobile Tests') {
-      steps {
-        bat 'runMobileTests.bat'
+      parallel {
+        stage('Web Tests') {
+          steps {
+            bat 'runWebTests.bat'
+          }
+        }
+        stage('Mobile Tests') {
+          steps {
+            bat 'runMobileTests.bat'
+          }
+        }
       }
     }
   }
