@@ -11,13 +11,8 @@ pipeline {
         bat 'run.bat'
       }
     }
-  }
-  post {
-    always {
-      archive 'results/*.html'
+	stage('results') {
       junit 'results/*.xml'
-
     }
-
   }
 }
