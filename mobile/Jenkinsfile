@@ -1,1 +1,23 @@
 
+pipeline {
+  agent any
+  stages {
+    stage('Checkout') {
+      steps {
+        echo 'Checkout code'
+      }
+    }
+        stage('Mobile') {
+          steps {
+            bat 'runMobileTests.bat'
+          }
+        }
+  }
+  post {
+    always {
+      junit 'results/*.xml'
+
+    }
+
+  }
+}
