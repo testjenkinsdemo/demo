@@ -1,10 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('test') {
+    stage('Checkout') {
       steps {
-        echo 'fefe'
+        echo 'Checkout code'
       }
     }
+        stage('Mobile Tests') {
+          steps {
+            echo 'Checkout code'
+          }
+        }
   }
+
 }
